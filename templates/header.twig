@@ -1,0 +1,61 @@
+<?php global $route ?>
+<header class="header">
+    <div class="header_container">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="header_content d-flex flex-row align-items-center justify-content-start">
+                        <div class="logo"><a href="#">Futbol Shop.</a></div>
+                        <nav class="main_nav">
+                            <ul>
+                                <li><a href="{{ router.generateURL('Product', 'index') }}">Inicio</a></li>
+                                <li class="hassubs">
+                                    <a href="{{ router.generateURL('Product', 'getCategories') }}">Categorias</a>
+                                    <ul>
+                                        <li><a href="{{ router.generateURL('Product', 'getBotasFutbol') }}">Botas de
+                                                futbol</a></li>
+                                        <li><a href="{{ router.generateURL('Product', 'getBotasFutbolSala') }}">Botas
+                                                de futbol sala</a></li>
+                                        <li>
+                                            <a href="{{ router.generateURL('Product', 'getCamisetasEntrenamiento') }}">Camisetas
+                                                de entrenamiento</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <div class="header_extra ml-auto">
+
+                        </div>
+
+                            {% if not session.nombre %}
+                                <a href="{{ router.generateURL('User', 'login') }}"><input class="loginButton" type="image" src="/projecteServidors/images/myuser.png">Login/Register
+                            {% endif %}
+
+
+
+                            {% if session.nombre %}
+                                {% if session.rol %}
+                                    {% if session.rol == 2 %}
+                                        <a href="{{ router.generateURL('User', 'profile') }}">
+                                            <input class="loginButton" type="image" src="/projecteServidors/images/myuser.png"> {{ session.nombre }}
+                                        </a>
+                                        <a href="{{ router.generateURL('User', 'dashboard') }}"><input
+                                                    class="loginButton" type="image" src="/projecteServidors/images/myuser.png"> Dashboard</a>
+                                        {%  elseif session.rol == 1 %}
+                                            <a href="{{ router.generateURL('User', 'profile') }}">
+                                                <input class="loginButton" type="image" src="/projecteServidors/images/myuser.png"> {{ session.nombre }}
+                                            </a>
+                                    {% endif %}
+                                {% endif %}
+
+                                <a href="{{ router.generateURL('User', 'logout') }}"><input class="loginButton" type="image"
+                                                                src="/projecteServidors/images/login.svg">Logout</a>
+                            {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

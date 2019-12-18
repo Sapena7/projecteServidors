@@ -1,0 +1,94 @@
+{% extends "base.twig" %}
+{% block title  %} {{ product.Nombre }} {% endblock %}
+
+{% block body  %}
+
+
+    <div class="product_details">
+        <div class="container">
+            <div class="row details_row">
+
+                <!-- Product Image -->
+                <div class="col-lg-6">
+                    <div class="details_image">
+                        <div class="details_image_large">
+                            {% set categoria = product.Categoria %}
+                            {% if categoria == 1 %}
+                                <img class="imgProduct" src="../images/botasFutbol/{{ product.Img }}">
+                            {% elseif categoria == 2 %}
+                                <img class="imgProduct" src="../images/botasFutbolSala/{{ product.Img }}">
+                            {% elseif categoria == 3 %}
+                                <img class="imgProduct" src="../images/camisetasEntrenamiento/{{ product.Img }}">
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Content -->
+                <div class="col-lg-6">
+                    <div class="details_content">
+                        <div class="details_name">{{  product.Nombre }}</div>
+
+                        <div class="details_price">{{  product.Precio }}€</div>
+
+                        <!-- In Stock -->
+                        <div class="in_stock_container">
+                            <div class="availability">Disponibilidad</div>
+                            <span>{{  product.Stock }}</span>
+                        </div>
+                        <div>
+                            <br>
+                            <span>{{ product.Fecha|date('Y-m-d') }}</span>
+                        </div><br>
+                        <div>
+                            <a href="{{ router.generateURL('Product', 'getProductsFilteredByUser', {id: product.Usuario}) }}">
+                                <img class="details_image_thumbnail" src="../images/{{ user.Img }}" alt="">
+                            </a>
+                        </div>
+
+
+                        <div class="details_text">
+                            <p>{{ product.Descripcion }}</p>
+                        </div>
+
+                        {% if session.rol %}
+                        <!-- Product Quantity -->
+                        <div class="product_quantity_container">
+                            <div class="product_quantity clearfix">
+                                <span>Cantidad</span>
+                                <input id="quantity_input" type="text" pattern="[0-9]*" value="1">
+                                <div class="quantity_buttons">
+                                    <div id="quantity_inc_button" class="quantity_inc quantity_control"><i class="fa fa-chevron-up" aria-hidden="true"></i></div>
+                                    <div id="quantity_dec_button" class="quantity_dec quantity_control"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+                                </div>
+                            </div>
+                            <div class="button cart_button"><a href="#">Añadir al carrito</a></div>
+                        </div>
+                        {% endif %}
+                        <!-- Share -->
+                        <div class="details_share">
+                            <span>Share:</span>
+                            <ul>
+                                <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row description_row">
+                <div class="col">
+                    <div class="description_title_container">
+                        <div class="description_title">Descripcion</div>
+                    </div>
+                    <div class="description_text">
+                        <p>{{ product.Descripcion }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

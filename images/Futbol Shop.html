@@ -1,0 +1,407 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"></head><body>array(2) {
+  ["page"]=&gt;
+  string(6) "inicio"
+  ["pages"]=&gt;
+  string(152) "2categoria=<br><b>Notice</b>:  Undefined index: categoria in <b>/opt/lampp/htdocs/projecteServidors/views/inicio.view.php</b> on line <b>189</b><br>"
+}
+<br>
+<b>Notice</b>:  A non well formed numeric value encountered in <b>/opt/lampp/htdocs/projecteServidors/index.php</b> on line <b>384</b><br>
+<br>
+<b>Notice</b>:  A non well formed numeric value encountered in <b>/opt/lampp/htdocs/projecteServidors/index.php</b> on line <b>395</b><br>
+<br>
+<b>Notice</b>:  A non well formed numeric value encountered in <b>/opt/lampp/htdocs/projecteServidors/index.php</b> on line <b>396</b><br>
+
+<php lang="en">
+    
+        <title>Futbol Shop</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="Futbol Shop project">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="Futbol%20Shop_fitxers/bootstrap.css">
+        <link href="Futbol%20Shop_fitxers/font-awesome.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="Futbol%20Shop_fitxers/owl.css">
+        <link rel="stylesheet" type="text/css" href="Futbol%20Shop_fitxers/owl_002.css">
+        <link rel="stylesheet" type="text/css" href="Futbol%20Shop_fitxers/animate.css">
+        <link rel="stylesheet" type="text/css" href="Futbol%20Shop_fitxers/main_styles.css">
+        <link rel="stylesheet" type="text/css" href="Futbol%20Shop_fitxers/categories.css">
+        <link rel="stylesheet" type="text/css" href="Futbol%20Shop_fitxers/responsive.css">
+        <style type="text/css">
+            form {
+                text-align: right;
+            }
+            input {
+                width: 100px;
+            }
+        </style>
+    
+    
+
+    <div class="super_container">
+<!-- Header -->
+
+<header class="header">
+    <div class="header_container">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="header_content d-flex flex-row align-items-center justify-content-start">
+                        <div class="logo"><a href="#">Futbol Shop.</a></div>
+                        <nav class="main_nav">
+                            <ul>
+                                <li><a href="http://localhost/projecteServidors/index.php?page=inicio">Inicio</a></li>
+                                <li class="hassubs">
+                                    <a href="http://localhost/projecteServidors/index.php?page=categories">Categorias</a>
+                                    <ul>
+                                        <li><a href="http://localhost/projecteServidors/index.php?page=botasFutbol">Botas de futbol</a></li>
+                                        <li><a href="http://localhost/projecteServidors/index.php?page=botasFutbolSala">Botas de futbol sala</a></li>
+                                        <li><a href="http://localhost/projecteServidors/index.php?page=camisetasEntrenamiento">Camisetas de entrenamiento</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="http://localhost/projecteServidors/index.php?page=contact">Contacto</a></li>
+                            </ul>
+                        </nav>
+
+                        <div class="header_extra ml-auto">
+                            <!--
+                                <div class="shopping_cart">
+                                    <a href="index.php?page=cart">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                             viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
+                                            <g>
+                                                <path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
+                                                    c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
+                                                    C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
+                                                    H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
+                                                    c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/>
+                                            </g>
+                                        </svg>
+                                        <div>Carrito <span>(0)</span></div>
+                                    </a>
+                                -->
+                        </div>
+
+
+
+
+                        <a href="http://localhost/projecteServidors/index.php?page=profile"><input class="loginButton" type="image" src="Futbol%20Shop_fitxers/myuser.png"> jsapena</a>
+
+                        
+
+                        <a href="http://localhost/projecteServidors/src/logout.php"><input class="loginButton" type="image" src="Futbol%20Shop_fitxers/login.svg">Logout</a>
+
+
+                        <div class="search">
+                            <div class="search_icon">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 475.084 475.084" style="enable-background:new 0 0 475.084 475.084;" xml:space="preserve">
+										<g>
+                                            <path d="M464.524,412.846l-97.929-97.925c23.6-34.068,35.406-72.047,35.406-113.917c0-27.218-5.284-53.249-15.852-78.087
+												c-10.561-24.842-24.838-46.254-42.825-64.241c-17.987-17.987-39.396-32.264-64.233-42.826
+												C254.246,5.285,228.217,0.003,200.999,0.003c-27.216,0-53.247,5.282-78.085,15.847C98.072,26.412,76.66,40.689,58.673,58.676
+												c-17.989,17.987-32.264,39.403-42.827,64.241C5.282,147.758,0,173.786,0,201.004c0,27.216,5.282,53.238,15.846,78.083
+												c10.562,24.838,24.838,46.247,42.827,64.234c17.987,17.993,39.403,32.264,64.241,42.832c24.841,10.563,50.869,15.844,78.085,15.844
+												c41.879,0,79.852-11.807,113.922-35.405l97.929,97.641c6.852,7.231,15.406,10.849,25.693,10.849
+												c9.897,0,18.467-3.617,25.694-10.849c7.23-7.23,10.848-15.796,10.848-25.693C475.088,428.458,471.567,419.889,464.524,412.846z
+												 M291.363,291.358c-25.029,25.033-55.148,37.549-90.364,37.549c-35.21,0-65.329-12.519-90.36-37.549
+												c-25.031-25.029-37.546-55.144-37.546-90.36c0-35.21,12.518-65.334,37.546-90.36c25.026-25.032,55.15-37.546,90.36-37.546
+												c35.212,0,65.331,12.519,90.364,37.546c25.033,25.026,37.548,55.15,37.548,90.36C328.911,236.214,316.392,266.329,291.363,291.358z
+												"></path>
+                                        </g>
+									</svg>
+                            </div>
+                        </div>
+                        <div class="hamburger"><i class="fa fa-bars" aria-hidden="true"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>    <!-- Search Panel -->
+    <div class="search_panel trans_300">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="search_panel_content d-flex flex-row align-items-center justify-content-end">
+                        <form action="#">
+                            <input type="text" class="search_input" placeholder="Search" required="required">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social -->
+    <div class="header_social">
+        <ul>
+            <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        </ul>
+    </div>
+    
+
+    <!-- Menu -->
+
+    <div class="menu menu_mm trans_300">
+        <div class="menu_container menu_mm">
+            <div class="page_menu_content">
+
+                <ul class="page_menu_nav menu_mm">
+                    <li class="page_menu_item has-children menu_mm">
+                        <a href="http://localhost/projecteServidors/index.php?page=inicio">Home<i class="fa fa-angle-down"></i></a>
+                        <ul class="page_menu_selection menu_mm">
+                            <li class="page_menu_item menu_mm"><a href="http://localhost/projecteServidors/index.php?page=categories">Categories<i class="fa fa-angle-down"></i></a></li>
+                            <li class="page_menu_item menu_mm"><a href="http://localhost/projecteServidors/index.php?page=product">Product<i class="fa fa-angle-down"></i></a></li>
+                            <li class="page_menu_item menu_mm"><a href="http://localhost/projecteServidors/index.php?page=cart">Cart<i class="fa fa-angle-down"></i></a></li>
+                            <li class="page_menu_item menu_mm"><a href="http://localhost/projecteServidors/index.php?page=checkout">Checkout<i class="fa fa-angle-down"></i></a></li>
+                            <li class="page_menu_item menu_mm"><a href="http://localhost/projecteServidors/index.php?page=contact">Contact<i class="fa fa-angle-down"></i></a></li>
+                        </ul>
+                    </li>
+                    <li class="page_menu_item has-children menu_mm">
+                        <a href="http://localhost/projecteServidors/index.php?page=categories">Categories<i class="fa fa-angle-down"></i></a>
+                        <ul class="page_menu_selection menu_mm">
+                            <li class="page_menu_item menu_mm"><a href="http://localhost/projecteServidors/index.php?page=categories">Category<i class="fa fa-angle-down"></i></a></li>
+                            <li class="page_menu_item menu_mm"><a href="http://localhost/projecteServidors/index.php?page=categories">Category<i class="fa fa-angle-down"></i></a></li>
+                            <li class="page_menu_item menu_mm"><a href="http://localhost/projecteServidors/index.php?page=categories">Category<i class="fa fa-angle-down"></i></a></li>
+                            <li class="page_menu_item menu_mm"><a href="http://localhost/projecteServidors/index.php?page=categories">Category<i class="fa fa-angle-down"></i></a></li>
+                        </ul>
+                    </li>
+                    <li class="page_menu_item menu_mm"><a href="http://localhost/projecteServidors/index.php?page=inicio">Accessories<i class="fa fa-angle-down"></i></a></li>
+                    <li class="page_menu_item menu_mm"><a href="http://localhost/projecteServidors/index.php?page=contact">Contact<i class="fa fa-angle-down"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="menu_close"><i class="fa fa-times" aria-hidden="true"></i></div>
+
+        <div class="menu_social">
+            <ul>
+                <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Filter -->
+
+    <!-- CARRUSEL? -->
+        <!-- Products -->
+        <div class="products">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+
+                        <!-- Product Sorting -->
+                        <form action="index.php?page=inicio" name="search_form" method="GET">
+                            <input type="hidden" name="page" value="inicio">
+                            <input type="hidden" name="pages" value="2categoria=&lt;br /&gt;&lt;b&gt;Notice&lt;/b&gt;:  Undefined index: categoria in &lt;b&gt;/opt/lampp/htdocs/projecteServidors/views/inicio.view.php&lt;/b&gt; on line &lt;b&gt;189&lt;/b&gt;&lt;br /&gt;">
+                            Categoria:
+                            <select name="categoria">
+                                <option value="1" selected="selected">Botas de futbol</option>
+                                <option value="2">Botas de futbol sala</option>
+                                <option value="3">Camisetas de entrenamiento</option>
+                            </select>
+
+                            Fecha Inicio:
+                            <input class="date" type="date" name="fechaMin">
+
+
+                            Fecha Final:
+                            <input class="date" type="date" name="fechaMax">
+
+                            <input class="text" type="text" name="textFilter">
+
+                            <input type="submit" name="search" value="Filtrar">
+                        </form>
+                        <div class="product_grid" style="position: relative; height: 444.5px;">
+
+                                                            <!-- Product -->
+                                <div class="product" style="position: absolute; left: 0px; top: 0px;">
+                                    <div class="product_image">
+                                                                                    <img src="Futbol%20Shop_fitxers/bota-adidas-predator-19-fg-bright-cyan-core-black-solar-yell.jpg" alt=""></div>
+
+                                                                            <div class="product_content">
+                                        <div class="product_title"><a href="http://localhost/projecteServidors/index.php?page=product&amp;&amp;id=8">Bota Predator 19+ FG</a></div>
+                                        <div class="product_price">219.46€</div>
+                                    </div>
+                                </div>
+                                                            <!-- Product -->
+                                <div class="product" style="position: absolute; left: 292px; top: 0px;">
+                                    <div class="product_image">
+                                                                                    <img src="Futbol%20Shop_fitxers/bota-adidas-predator-19-fg-core-black-utility-black-0.jpg" alt=""></div>
+
+                                                                            <div class="product_content">
+                                        <div class="product_title"><a href="http://localhost/projecteServidors/index.php?page=product&amp;&amp;id=9">Bota Predator 19+ FG</a></div>
+                                        <div class="product_price">219.46€</div>
+                                    </div>
+                                </div>
+                                                            <!-- Product -->
+                                <div class="product" style="position: absolute; left: 585px; top: 0px;">
+                                    <div class="product_image">
+                                                                                    <img src="Futbol%20Shop_fitxers/bota-adidas-x-19-fg-bright-cyan-core-black-shock-pink-0.jpg" alt=""></div>
+
+                                                                            <div class="product_content">
+                                        <div class="product_title"><a href="http://localhost/projecteServidors/index.php?page=product&amp;&amp;id=10">Bota Predator 19+ FG</a></div>
+                                        <div class="product_price">219.46€</div>
+                                    </div>
+                                </div>
+                                                            <!-- Product -->
+                                <div class="product" style="position: absolute; left: 877px; top: 0px;">
+                                    <div class="product_image">
+                                                                                    <img src="Futbol%20Shop_fitxers/bota-puma-future-4.jpg" alt=""></div>
+
+                                                                            <div class="product_content">
+                                        <div class="product_title"><a href="http://localhost/projecteServidors/index.php?page=product&amp;&amp;id=11">Bota Future 4.1 BALR FG/AG</a></div>
+                                        <div class="product_price">249.95€</div>
+                                    </div>
+                                </div>
+                                                    </div>
+                        <div class="product_pagination">
+                            <ul>
+                                                                    <li class="active"><a href="http://localhost/projecteServidors/index.php?page=inicio&amp;pages=1categoria=%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Undefined%20index:%20categoria%20in%20%3Cb%3E/opt/lampp/htdocs/projecteServidors/views/inicio.view.php%3C/b%3E%20on%20line%20%3Cb%3E183%3C/b%3E%3Cbr%20/%3E">Previous</a></li>
+                                
+                                                                    <li class="active"><a href="http://localhost/projecteServidors/index.php?page=inicio&amp;pages=1categoria=%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Undefined%20index:%20categoria%20in%20%3Cb%3E/opt/lampp/htdocs/projecteServidors/views/inicio.view.php%3C/b%3E%20on%20line%20%3Cb%3E189%3C/b%3E%3Cbr%20/%3E">1</a></li>
+                                                                        <li class="active"><a href="http://localhost/projecteServidors/index.php?page=inicio&amp;pages=2categoria=%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Undefined%20index:%20categoria%20in%20%3Cb%3E/opt/lampp/htdocs/projecteServidors/views/inicio.view.php%3C/b%3E%20on%20line%20%3Cb%3E189%3C/b%3E%3Cbr%20/%3E">2</a></li>
+                                                                        <li class="active"><a href="http://localhost/projecteServidors/index.php?page=inicio&amp;pages=3categoria=%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Undefined%20index:%20categoria%20in%20%3Cb%3E/opt/lampp/htdocs/projecteServidors/views/inicio.view.php%3C/b%3E%20on%20line%20%3Cb%3E189%3C/b%3E%3Cbr%20/%3E">3</a></li>
+                                                                        <li class="active"><a href="http://localhost/projecteServidors/index.php?page=inicio&amp;pages=4categoria=%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Undefined%20index:%20categoria%20in%20%3Cb%3E/opt/lampp/htdocs/projecteServidors/views/inicio.view.php%3C/b%3E%20on%20line%20%3Cb%3E189%3C/b%3E%3Cbr%20/%3E">4</a></li>
+                                                                        <li class="active"><a href="http://localhost/projecteServidors/index.php?page=inicio&amp;pages=5categoria=%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Undefined%20index:%20categoria%20in%20%3Cb%3E/opt/lampp/htdocs/projecteServidors/views/inicio.view.php%3C/b%3E%20on%20line%20%3Cb%3E189%3C/b%3E%3Cbr%20/%3E">5</a></li>
+                                                                        <li class="active"><a href="http://localhost/projecteServidors/index.php?page=inicio&amp;pages=6categoria=%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Undefined%20index:%20categoria%20in%20%3Cb%3E/opt/lampp/htdocs/projecteServidors/views/inicio.view.php%3C/b%3E%20on%20line%20%3Cb%3E189%3C/b%3E%3Cbr%20/%3E">6</a></li>
+                                                                        <li class="active"><a href="http://localhost/projecteServidors/index.php?page=inicio&amp;pages=7categoria=%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Undefined%20index:%20categoria%20in%20%3Cb%3E/opt/lampp/htdocs/projecteServidors/views/inicio.view.php%3C/b%3E%20on%20line%20%3Cb%3E189%3C/b%3E%3Cbr%20/%3E">7</a></li>
+                                                                        <li class="active"><a href="http://localhost/projecteServidors/index.php?page=inicio&amp;pages=8categoria=%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Undefined%20index:%20categoria%20in%20%3Cb%3E/opt/lampp/htdocs/projecteServidors/views/inicio.view.php%3C/b%3E%20on%20line%20%3Cb%3E189%3C/b%3E%3Cbr%20/%3E">8</a></li>
+                                                                        <li class="active"><a href="http://localhost/projecteServidors/index.php?page=inicio&amp;pages=9categoria=%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Undefined%20index:%20categoria%20in%20%3Cb%3E/opt/lampp/htdocs/projecteServidors/views/inicio.view.php%3C/b%3E%20on%20line%20%3Cb%3E189%3C/b%3E%3Cbr%20/%3E">9</a></li>
+                                                                                                        <li class="active"><a href="http://localhost/projecteServidors/index.php?page=inicio&amp;pages=3categoria=%3Cbr%20/%3E%3Cb%3ENotice%3C/b%3E:%20%20Undefined%20index:%20categoria%20in%20%3Cb%3E/opt/lampp/htdocs/projecteServidors/views/inicio.view.php%3C/b%3E%20on%20line%20%3Cb%3E195%3C/b%3E%3Cbr%20/%3E">Next</a></li>
+                                
+
+
+                                <!--<li><a href="#">02.</a></li>
+                                <li><a href="#">03.</a></li>-->
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- Icon Boxes -->
+
+    <div class="icon_boxes">
+        <div class="container">
+            <div class="row icon_box_row">
+
+                <!-- Icon Box -->
+                <div class="col-lg-4 icon_box_col">
+                    <div class="icon_box">
+                        <div class="icon_box_image"><img src="Futbol%20Shop_fitxers/icon_1.svg" alt=""></div>
+                        <div class="icon_box_title">Envio gratis a todo el mundo</div>
+                        <div class="icon_box_text">
+                            <p>Enviamos nuestros productos a todo el mundo.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Icon Box -->
+                <div class="col-lg-4 icon_box_col">
+                    <div class="icon_box">
+                        <div class="icon_box_image"><img src="Futbol%20Shop_fitxers/icon_2.svg" alt=""></div>
+                        <div class="icon_box_title">Devolución gratuita</div>
+                        <div class="icon_box_text">
+                            <p>Devolución gratuita durante la primera semana.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Icon Box -->
+                <div class="col-lg-4 icon_box_col">
+                    <div class="icon_box">
+                        <div class="icon_box_image"><img src="Futbol%20Shop_fitxers/icon_3.svg" alt=""></div>
+                        <div class="icon_box_title">Soporte 24h</div>
+                        <div class="icon_box_text">
+                            <p>Nuestro equipo de soporte está todo el dia para ayudar.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsletter -->
+
+    <div class="newsletter">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="newsletter_border"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="newsletter_content text-center">
+                        <div class="newsletter_title">Suscribete a nuestra pagina</div>
+                        <div class="newsletter_text"><p>Asi podras recibir las ultimas noticias!</p></div>
+                        <div class="newsletter_form_container">
+                            <form action="#" id="newsletter_form" class="newsletter_form">
+                                <input type="email" class="newsletter_input" required="required">
+                                <button class="newsletter_button trans_200"><span>Suscribete</span></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Footer -->
+
+<div class="footer_overlay"></div>
+<footer class="footer">
+    <div class="footer_background" style="background-image:url(images/footer.jpg)"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="footer_content d-flex flex-lg-row flex-column align-items-center justify-content-lg-start justify-content-center">
+                    <div class="footer_logo"><a href="#">Futbol Shop.</a></div>
+                    <div class="copyright ml-auto mr-auto">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright ©<script>document.write(new Date().getFullYear());</script>2019
+                        All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com/" target="_blank">Colorlib</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+                    <div class="footer_social ml-lg-auto">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>    
+
+
+    <script src="Futbol%20Shop_fitxers/jquery-3.js"></script>
+    <script src="Futbol%20Shop_fitxers/popper.js"></script>
+    <script src="Futbol%20Shop_fitxers/bootstrap.js"></script>
+    <script src="Futbol%20Shop_fitxers/TweenMax.js"></script>
+    <script src="Futbol%20Shop_fitxers/TimelineMax.js"></script>
+    <script src="Futbol%20Shop_fitxers/ScrollMagic.js"></script>
+    <script src="Futbol%20Shop_fitxers/animation.js"></script>
+    <script src="Futbol%20Shop_fitxers/ScrollToPlugin.js"></script>
+    <script src="Futbol%20Shop_fitxers/owl.js"></script>
+    <script src="Futbol%20Shop_fitxers/isotope.js"></script>
+    <script src="Futbol%20Shop_fitxers/easing.js"></script>
+    <script src="Futbol%20Shop_fitxers/parallax.js"></script>
+    <script src="Futbol%20Shop_fitxers/custom.js"></script>
+    
+</php>
+</body></html>
