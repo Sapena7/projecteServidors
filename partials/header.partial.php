@@ -44,7 +44,7 @@
                         <?php  if (!empty($_SESSION['nombre'])) { ?>
                             <?php
                             if (!empty($_SESSION['rol'])){
-                                if ($_SESSION['rol'] == 2) { ?>
+                                if ($_SESSION['rol'] == "admin") { ?>
                                     <a href="<?= $route->generateURL('User', 'dashboard') ?>"><input class="loginButton" type="image" src="/projecteServidors/images/myuser.png"> Dashboard</a>
                                 <?php }
                             }

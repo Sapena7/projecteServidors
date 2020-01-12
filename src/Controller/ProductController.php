@@ -935,13 +935,9 @@ class ProductController extends AbstractController{
 
         $nombre = $_SESSION['nombre'];
 
-        if (!isset($_SESSION['rol'])) {
-            header("location: " . $route->generateURL('User', 'login'));
-        } else {
-            if ($_SESSION['rol'] != 2) {
+            if ($_SESSION['rol'] != "admin") {
                 header("location: " . $route->generateURL('User', 'login'));
             }
-        }
 
         try {
             /*
@@ -1007,5 +1003,4 @@ class ProductController extends AbstractController{
 
         require("views/adminProducts.view.php");
     }
-
 }

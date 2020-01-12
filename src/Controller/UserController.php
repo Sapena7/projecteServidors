@@ -9,7 +9,8 @@ use App\Entity\User;
 class UserController extends AbstractController
 {
 
-    function login(){
+    public function login(){
+        global $route;
         $model = new UserModel($this->db);
         $user = $model->fillData();
 
@@ -20,21 +21,21 @@ class UserController extends AbstractController
 
             session_start();
             $_SESSION['time_start'] = time();
+            header("location: " . $route->generateURL('User', 'profile'));
+            $model->login($user); //Comprova l'usuari i la contrasenya i fa login
 
             if (isset($_GET['cerrar_sesion'])) {
                 session_unset();
                 session_destroy();
                 set_cookie(session_name(), '0', time()-2222);
             }
-
-            $model->login($user); //Comprova l'usuari i la contrasenya i fa login
-
         }
         require('views/login.view.php');
         return "";
     }
 
-    function register(){
+    public function register(){
+        global $route;
         $model = new UserModel($this->db);
         $user = $model->fillDataRegister();
 
@@ -45,6 +46,7 @@ class UserController extends AbstractController
 
             session_start();
             $_SESSION['time_start'] = time();
+            header("location: " . $route->generateURL('User', 'profile'));
 
             $model->register($user); //Comprova l'usuari i la contrasenya i fa login
 
@@ -53,7 +55,7 @@ class UserController extends AbstractController
         return "";
     }
 
-    function dashboard(){
+    public function dashboard(){
         global $route;
         session_start();
         $nombre = $_SESSION['nombre'];
@@ -62,13 +64,9 @@ class UserController extends AbstractController
          * Si l'usuari no te rol va al login,
          * i si en te pero no es 2 tambe.
          */
-        if (!isset($_SESSION['rol'])) {
-            header("location: " . $route->generateURL('User', 'login'));
-        } else {
-            if ($_SESSION['rol'] != 2) {
+            if ($_SESSION['rol'] != "admin") {
                 header("location: " . $route->generateURL('User', 'login'));
             }
-        }
         require('views/dashboard.view.php');
         return "";
     }

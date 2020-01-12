@@ -101,7 +101,6 @@ class UserModel
     }
 
     public function register(User $user){
-        global $route;
         try {
             /*
              Id
@@ -152,9 +151,6 @@ class UserModel
                             $_SESSION['nombre'] = $nom;
                         }
 
-
-
-                        header("location: " . $route->generateURL('User', 'profile'));
                     }else{
                         echo "Las contraseñas no coinciden";
                     }

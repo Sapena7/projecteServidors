@@ -112,6 +112,11 @@
     "method": "change_password"
   },
 
+  "projecteServidors/admin/editUsers": {
+    "controller": "User",
+    "method": "editUsers"
+  },
+
   "projecteServidors/logout": {
     "controller": "User",
     "method": "logout"

@@ -44,6 +44,9 @@
                     <a href='<?php echo $route->generateURL('Product', 'getAdminProducts') ?>'><i class="fa fa-fw fa-user-plus"></i> Productos</a>
                 </li>
                 <li>
+                    <a href='<?php echo $route->generateURL('User', 'editUsers') ?>' target="_blank"><i class="glyphicon glyphicon-pencil"></i> Editar Usuarios </a>
+                </li>
+                <li>
                     <a href='<?php echo $route->generateURL('Product', 'index') ?>'>Tienda</a>
                 </li>
                 <li>
