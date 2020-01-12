@@ -1,0 +1,127 @@
+{
+  "projecteServidors/": {
+    "controller": "Product",
+    "method": "index"
+    },
+
+  "projecteServidors/search": {
+    "controller": "Product",
+    "method": "getProductsFiltered"
+  },
+
+  "projecteServidors/product/:id": {
+    "controller": "Product",
+    "method": "getProductById",
+    "params": {
+      "id": "number"
+    }
+  },
+
+  "projecteServidors/user/:id": {
+    "controller": "Product",
+    "method": "getProductsFilteredByUser",
+    "params": {
+      "id": "number"
+    }
+  },
+
+
+  "projecteServidors/botasDeFutbol": {
+    "controller": "Product",
+    "method": "getBotasFutbol"
+  },
+
+  "projecteServidors/botasDeFutbol/search": {
+    "controller": "Product",
+    "method": "getBotasFutbolFiltered"
+  },
+
+  "projecteServidors/botasFutbolSala": {
+    "controller": "Product",
+    "method": "getBotasFutbolSala"
+  },
+
+  "projecteServidors/botasFutbolSala/search": {
+    "controller": "Product",
+    "method": "getBotasFutbolSalaFiltered"
+  },
+
+  "projecteServidors/camisetasEntrenamiento": {
+    "controller": "Product",
+    "method": "getCamisetasEntrenamiento"
+  },
+
+  "projecteServidors/camisetasEntrenamiento/search": {
+    "controller": "Product",
+    "method": "getCamisetasEntrenamientoFiltered"
+  },
+
+  "projecteServidors/createProduct": {
+    "controller": "Product",
+    "method": "createProduct"
+  },
+
+  "projecteServidors/modifyProduct/:id": {
+    "controller": "Product",
+    "method": "modifyProduct",
+    "params": {
+      "id": "number"
+    }
+  },
+
+  "projecteServidors/deleteProduct/:id": {
+    "controller": "Product",
+    "method": "deleteProduct",
+    "params": {
+      "id": "number"
+    }
+  },
+
+  "projecteServidors/editProductsUser": {
+    "controller": "Product",
+    "method": "editProductsUser"
+  },
+
+  "projecteServidors/admin/adminProducts": {
+    "controller": "Product",
+    "method": "getAdminProducts"
+  },
+
+  "projecteServidors/login": {
+    "controller": "User",
+    "method": "login"
+  },
+
+  "projecteServidors/admin/dashboard": {
+    "controller": "User",
+    "method": "dashboard"
+  },
+
+  "projecteServidors/profile": {
+    "controller": "User",
+    "method": "profile"
+  },
+
+  "projecteServidors/editProfile": {
+    "controller": "User",
+    "method": "editProfile"
+  },
+
+  "projecteServidors/changePassword": {
+    "controller": "User",
+    "method": "change_password"
+  },
+
+  "projecteServidors/logout": {
+    "controller": "User",
+    "method": "logout"
+  },
+
+  "projecteServidors/register": {
+    "controller": "User",
+    "method": "register"
+  }
+
+
+
+}
