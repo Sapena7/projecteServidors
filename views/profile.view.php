@@ -69,6 +69,14 @@ Licensed under MIT
         </div>
         <div class="col-md-9">
             <div class="profile-content">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Id</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p><?php echo $userInformation->getId(); ?></p>
+                        </div>
+                    </div><br>
                         <div class="row">
                             <div class="col-md-6">
                                 <label>Nombre</label>
@@ -77,6 +85,22 @@ Licensed under MIT
                                 <p><?php echo $userInformation->getNombre(); ?></p>
                             </div>
                         </div><br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Apellidos</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p><?php echo $userInformation->getApellidos(); ?></p>
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Provincia</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p><?php echo $userInformation->getProvincia(); ?></p>
+                        </div>
+                    </div><br>
                         <div class="row">
                             <div class="col-md-6">
                                 <label>Email</label>

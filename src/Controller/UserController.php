@@ -110,11 +110,13 @@ class UserController extends AbstractController
 
         $userNotModified = $model->getUserInformation($id); //Agafa l'informacio de l'usuari a partir del id
         $userModified = $model->fillDataModify(); //Plena l'usuari
-        $userModified->setId($id); //li posa el ud
+        $userModified->setId($id); //li posa el id
         $errors = $model->validate($userModified); //verifica els errors
 
         if (empty($errors)) {
             $model->updateUser($userModified);
+            header("location: " . $route->generateURL('User', 'editProfile'));
+
         }
 
         $statusMsg = $model->uploadImatge($id); //Per a putjar l'imatge

@@ -136,6 +136,8 @@ class UserModel
 
                         $stmt->execute();
 
+                        session_start();
+
                         $_SESSION['rol'] = 1;
 
                         $stmt = $this->pdo->prepare("SELECT * FROM Usuarios WHERE Email='$email' AND Contrasena='$contrasena'");
@@ -145,7 +147,9 @@ class UserModel
                         $row = $stmt->fetch(PDO::FETCH_NUM);
                         if ($row == true) {
                             $id = $row['0'];
+                            $nom = $row['2'];
                             $_SESSION['Id'] = $id;
+                            $_SESSION['nombre'] = $nom;
                         }
 
 
@@ -288,6 +292,8 @@ class UserModel
 
         $email = trim(filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING));
         $nombre = trim(filter_input(INPUT_POST, 'nombre', FILTER_SANITIZE_STRING));
+        $apellidos = trim(filter_input(INPUT_POST, 'apellidos', FILTER_SANITIZE_STRING));
+        $provincia = trim(filter_input(INPUT_POST, 'provincia', FILTER_SANITIZE_STRING));
 
         /*
         Email
@@ -300,6 +306,8 @@ class UserModel
 
         $user->setEmail($email);
         $user->setNombre($nombre);
+        $user->setApellidos($apellidos);
+        $user->setProvincia($provincia);
 
         return $user;
     }
@@ -382,6 +390,14 @@ class UserModel
             $errors[] = "Email no pot ser buit";
         }
 
+        if (empty($user->getApellidos())) {
+            $errors[] = "Apellidos no pot ser buit";
+        }
+
+        if (empty($user->getProvincia())) {
+            $errors[] = "Provincia no pot ser buit";
+        }
+
         return $errors;
     }
 
@@ -446,12 +462,16 @@ class UserModel
         $id = $user->getId();
 
         $nombre = $user->getNombre();
+        $apellidos = $user->getApellidos();
+        $provincia = $user->getProvincia();
         $email = $user->getEmail();
 
-        $stmt = $this->pdo->prepare("UPDATE Usuarios set Nombre = :nombre, Email = :email WHERE Id = :id");
+        $stmt = $this->pdo->prepare("UPDATE Usuarios set Nombre = :nombre, Apellidos = :apellidos, Provincia = :provincia, Email = :email WHERE Id = :id");
 
         $stmt->bindParam(':id',$id, PDO::PARAM_INT);
         $stmt->bindParam(':nombre',$nombre, PDO::PARAM_STR);
+        $stmt->bindParam(':apellidos',$apellidos, PDO::PARAM_STR);
+        $stmt->bindParam(':provincia',$provincia, PDO::PARAM_STR);
         $stmt->bindParam(':email',$email, PDO::PARAM_STR);
 
 

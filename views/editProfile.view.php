@@ -83,6 +83,22 @@ Licensed under MIT
                         <input type="text" class="form-control" id="nombre" name="nombre" value="<?php echo $userNotModified->getNombre() ?>" ><br>
                     </div>
                 </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Apellidos</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="apellidos" name="apellidos" value="<?php echo $userNotModified->getApellidos() ?>" ><br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Provincia</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="provincia" name="provincia" value="<?php echo $userNotModified->getProvincia() ?>" ><br>
+                        </div>
+                    </div>
                 <div class="row">
                     <div class="col-md-6">
                         <label>Email</label>
@@ -119,7 +135,7 @@ Licensed under MIT
                         </div>
                     </div><br>
 
-                <input type="submit" name="submit" class="btn btn-primary" value="Modificar">
+                    <input type="submit" name="submit" class="btn btn-primary" value="Modificar">
                     <a href='<?php echo $route->generateURL('User', 'profile') ?>' class="btn btn-primary">Volver</a>
 
                 </form>
